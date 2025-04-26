@@ -9,6 +9,9 @@
  * NOTE TO STUDENTS: Replace this header comment with your own header
  * comment that gives a high level description of your solution.
  */
+
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
@@ -42,6 +45,8 @@ team_t team = {
 
 #define SIZE_T_SIZE (ALIGN(sizeof(size_t)))
 
+// 매크로 기본 설정
+
 /*
  * mm_init - initialize the malloc package.
  */
@@ -56,12 +61,15 @@ int mm_init(void)
  */
 void *mm_malloc(size_t size)
 {
+
+    // 가장 단순한 할당기
+    // 블록 재사용.검색과정이 없음
     int newsize = ALIGN(size + SIZE_T_SIZE);
     void *p = mem_sbrk(newsize);
     if (p == (void *)-1)
         return NULL;
     else
-    {
+    {   
         *(size_t *)p = size;
         return (void *)((char *)p + SIZE_T_SIZE);
     }
