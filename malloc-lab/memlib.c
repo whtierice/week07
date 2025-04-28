@@ -56,6 +56,7 @@ void mem_reset_brk()
  *    this model, the heap cannot be shrunk.
  */
 void *mem_sbrk(int incr) 
+// 힙(가상 메모리)을 늘이면서 그 시작 주소를 돌려주는” 함수이기 때문에, 반환 타입 자체가 void *임.
 {
     char *old_brk = mem_brk;
 
