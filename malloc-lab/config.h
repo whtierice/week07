@@ -32,7 +32,18 @@
   "binary-bal.rep",\
   "binary2-bal.rep",\
   "realloc-bal.rep",\
-  "realloc2-bal.rep"
+  "realloc2-bal.rep",\
+  "amptjp.rep",\
+  "cccp.rep",\
+  "cp-decl.rep",\
+  "expr.rep",\
+  "coalescing.rep",\
+  "random.rep",\
+  "random2.rep",\
+  "binary.rep",\
+  "binary2.rep",\
+  "realloc.rep",\
+  "realloc2.rep"
 
 /*
  * This constant gives the estimated performance of the libc malloc
